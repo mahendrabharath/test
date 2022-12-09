@@ -1,0 +1,51 @@
+
+.address__container {
+  display: grid;
+  grid-template-areas:  
+  'no line1 line1 line1 line1 line1 line1 line1'
+  'line2 line2 line2 line2 line2 line2 line2 line2 '
+  'district district district district country country country country'
+  'state state state state pin__code pin__code pin__code pin__code'
+  'landMark landMark landMark landMark landMark landMark landMark landMark'
+  ;
+}
+
+.no {
+  grid-area: no;
+  margin: 0 5px;
+}
+
+.address__line1 {
+  grid-area: line1;
+  margin: 0 5px;
+}
+
+.address__line2 {
+  grid-area: line2;
+  margin: 0 5px;
+}
+
+.district {
+  grid-area: district;
+  margin: 0 5px;
+}
+
+.country {
+  grid-area: country;
+  margin: 0 5px;
+}
+
+.state {
+  grid-area: state;
+  margin: 0 5px;
+}
+
+.pin__code {
+  grid-area: pin__code;
+  margin: 0 5px;
+}
+
+.landMark{
+  grid-area: landMark;
+  margin: 0 5px;
+}

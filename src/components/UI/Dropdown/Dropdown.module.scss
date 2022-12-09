@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+$base-color: #03a9f4;
+
+.dropdown_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.sec_center {
+    position: relative;
+    //   max-width: 12%;
+    text-align: center;
+    z-index: 200;
+   
+}
+.invalid {
+    border: 1px red solid;
+}
+.dropdown[type="checkbox"]:checked,
+.dropdown[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown:checked+.for_dropdown,
+.dropdown:not(:checked)+.for_dropdown {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 2;
+    height: 50px;
+    transition: all 200ms linear;
+    border-radius: 4px;
+    width: 220px;
+    letter-spacing: 1px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: none;
+    background-color: #28242f;
+    cursor: pointer;
+    color: $base-color;
+    box-shadow: 0 12px 35px 0 rgba(255, 235, 167, 0.15);
+}
+
+.dropdown:checked+.for_dropdown:before,
+.dropdown:not(:checked)+.for_dropdown:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.dropdown:checked+.for_dropdown:before {
+    pointer-events: auto;
+}
+
+.dropdown:not(:checked)+.for_dropdown .uil {
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 200ms linear;
+}
+
+.dropdown:checked+.for_dropdown .uil {
+    transform: rotate(180deg);
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 200ms linear;
+}
+
+.section_dropdown {
+    position: absolute;
+    padding: 5px;
+    background-color: #111;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 200ms linear;
+    height: 40vh;
+    overflow-y: scroll;
+    max-height: 135px; // show upto 3 options
+      /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.dropdown:checked~.section_dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.section_dropdown:before {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    z-index: 1;
+}
+
+.section_dropdown:after {
+    position: absolute;
+    top: -7px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #111;
+    content: "";
+    display: block;
+    z-index: 2;
+    transition: all 200ms linear;
+}
+
+.section_dropdown a {
+    position: relative;
+    color: #fff;
+    transition: all 200ms linear;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 10px 0;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin: 2px 0;
+    text-align: left;
+    text-decoration: none;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-pack: distribute;
+}
+
+.section_dropdown a:hover, .section_dropdown a.active {
+    // color: #102770;
+    // background-color: #ffeba7;
+    color: $base-color;
+    background-color: #eff2f7;
+}
+
+.section_dropdown a .uil {
+    font-size: 22px;
+}
+

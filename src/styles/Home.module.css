@@ -1,0 +1,25 @@
+.headding {
+  display: inline-block;
+  position: relative;
+  /* color: #0087ca; */
+}
+
+.headding:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from { width: 0%;}
+  to { width: 100%;}
+}

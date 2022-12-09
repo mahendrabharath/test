@@ -1,0 +1,93 @@
+$gcolor: #17141d; // global color
+$color_: #a1a1af; // text
+$border: #28242f;
+$blocks: #201c29;
+$shadow: #070509;
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + rem;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+
+.container {
+  // height: 8vh;
+  align-items: center;
+  justify-content: center;
+  font: 600 62.5% "Lato", sans-serif;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  width: 100%;
+  overflow-y: hidden;
+  padding-top: 10px;
+  white-space: nowrap;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+a.tag {
+  text-decoration: none;
+  white-space: nowrap;
+  @include font-size(1);
+  color: $color_;
+  display: inline-block;
+
+  &.tag {
+    // display: block;
+    padding: 0.3em 0.85em;
+    margin: 0.5em;
+    text-transform: uppercase;
+    border: 3px solid $border;
+    border-radius: 2em;
+
+    transition: transform 0.2s;
+    transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, -0.45);
+
+    &.active {
+      background: linear-gradient(to right, #ff8a00, #da1b60);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      background: linear-gradient(to right, #ff8a00, #da1b60);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+
+// @media (max-width: 991px) {
+//   .container {
+//     background-image: none;
+
+//     label {
+//       pointer-events: none;
+//       visibility: hidden;
+//       opacity: 0;
+//     }
+//   }
+// }

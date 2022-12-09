@@ -1,0 +1,76 @@
+.image {
+    width: 35px;
+    background: #64b5f6;
+    border-radius: 50px;
+    padding: 2px;
+    border: 0.5px red solid;
+}
+
+.role {
+    font-size: xx-small;
+    padding: 0px;
+    margin: 0px;
+}
+
+.name {
+    padding: 0px;
+    margin: 0px;
+    font-size: small;
+}
+
+.activity__container {
+    display: flex;
+    column-gap: 1em;
+    padding: 5px 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.activity_image_frame {
+    background: #2C2F33;
+    box-shadow: inset -12.446px -12.446px 31.1151px #3b4451, inset 12.446px 12.446px 31.1151px #000000;
+    border-radius: 248.921px;
+    padding: 7px;
+    width: max-content;
+
+    .activity_image {
+        width: 55px;
+    }
+}
+
+.activity_content {
+    width: 218px;
+
+    .profile_name,
+    .profile_task,
+    .profile_time {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .profile_name {
+        font-weight: 700;
+        font-size: medium;
+        padding: 5px 0px;
+    }
+
+    .profile_task {
+        font-size: 13px;
+    }
+
+    .profile_time {
+        font-size: 13px;
+    }
+}
+
+.proceed_button {
+    color: #CEDBDC;
+    background: #2C2F33;
+    box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000000;
+    padding: 0px 5px;
+    margin: 10px;
+    font-size: -webkit-xxx-large;
+    border-radius: 24px;
+}

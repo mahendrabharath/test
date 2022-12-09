@@ -1,0 +1,29 @@
+.table__root {
+    border-spacing: 0 30px;
+}
+
+.table__row {
+
+    background: #2C2F33;
+    box-shadow: -6.22302px -6.22302px 18.6691px #3B4451, 6.22302px 6.22302px 18.6691px #000000;
+    border-radius: 24.8921px;
+}
+
+.table__row .table__data {
+    padding: 15px 50px;
+
+    background: #2C2F33;
+    /* box-shadow: -6.22302px -6.22302px 18.6691px #3B4451, 6.22302px 6.22302px 18.6691px #000000; */
+}
+
+.table__data:first-child {
+    /*     border-left-style: solid; */
+    border-top-left-radius: 24.8921px;
+    border-bottom-left-radius: 24.8921px;
+}
+
+.table__data:last-child {
+    /*     border-right-style: solid; */
+    border-bottom-right-radius: 24.8921px;
+    border-top-right-radius: 24.8921px;
+}

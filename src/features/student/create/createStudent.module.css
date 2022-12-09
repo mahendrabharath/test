@@ -1,0 +1,48 @@
+.form__container {
+    padding: 50px;
+}
+
+.basic__details {
+    width: 500px;
+}
+
+.cover__image {
+    float: right;    
+    position: sticky;
+    top: 20px;
+
+}
+
+
+.motherTongue {
+    width: 600px;
+}
+
+.save__button{
+    width: 200px;
+    padding: 50px 0px;
+    position: relative;
+    left: 40%;
+}
+
+.date__of__birth {
+    color: antiquewhite !important;
+    background: black;
+}
+
+.date__of__birth span {
+    color: whitesmoke;
+}
+
+.add__parent:hover {
+    color: #03a9f4;
+    cursor:pointer;
+}
+
+.add__parent {
+    font-size: 10em;
+    padding: 0px 26px;
+    border: 3px dotted;
+    border-radius: 15px;
+}
+/* .add__parent:before { content: '\eaf7'; } 'î«·' */

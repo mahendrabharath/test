@@ -1,0 +1,23 @@
+.add__parent__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    .cover__image {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.add__parent__submit {
+    width: 35%;
+    left: 30%;
+    position: relative;
+    margin: 15px;
+    button {
+        width: 100%;
+    }
+}
