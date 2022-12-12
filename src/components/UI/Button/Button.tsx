@@ -3,7 +3,7 @@ import buttonStyles from "./Button.module.css";
 
 interface IButtonProps {
   label: string;
-  onClick: (e: MouseEvent<HTMLButtonElement> | void) => void;
+  onClick?: (e: MouseEvent<HTMLButtonElement> | void) => void;
   disabled?: boolean;
   classes?: string;
 }

@@ -4,12 +4,14 @@ import inputStyles from "./TextInput.module.scss";
 interface IInputProps {
   placeholder: string;
   name?: string;
-  onChange: (e:  ChangeEvent<HTMLInputElement>) => void
-  value: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
   className?: string;
   type?: string;
   onBlur?: () => void;
   onFocus?: () => void;
+  maxLength?: number;
+  disabled?: boolean;
 }
 
 const Input: FC<IInputProps> = ({
@@ -21,6 +23,7 @@ const Input: FC<IInputProps> = ({
   type = "input",
   onBlur,
   onFocus,
+  maxLength,
 }) => {
   return (
     <div className={`${inputStyles.form__group} ${inputStyles[className]}`}>
@@ -34,6 +37,7 @@ const Input: FC<IInputProps> = ({
         type={type}
         onBlur={onBlur}
         onFocus={onFocus}
+        maxLength={maxLength}
       />
       <label htmlFor="name" className={inputStyles.form__label}>
         {placeholder}
